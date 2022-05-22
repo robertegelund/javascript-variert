@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_8_Fravaersgrense.css">
+    <title>Timetall og fraværsgrense i videregående skole</title>
+</head>
+<body>
+    <section>
+        <h1>Er du over eller under fraværsgrensa i et fag?</h1>
+        <h2>Sjekk, da vel!</h2>
+        <input id="timetall" type="number" placeholder="Legg inn antall fagtimer" required>
+        <input id="fravaer" type="number" placeholder="Legg inn antall fraværstimer" required>
+        <p id="overUnder"></p>
+    </section>
+    
+    <script>
+        const timetall = document.querySelector("#timetall");
+        const fravaer = document.querySelector("#fravaer");
+        const overUnder = document.querySelector("#overUnder");
+
+        function regnUt () {
+            if (timetall.value === "" || fravaer.value === "") {
+            overUnder.innerText = "Vennligst fyll ut begge feltene";
+                return;
+            } if ((Number(fravaer.value) / Number(timetall.value)) >= 0.10) {
+                overUnder.innerText = "Du har akkurat nådd eller overstiger fraværsgrensa på 10 %";
+            } if ((Number(fravaer.value) / Number(timetall.value)) < 0.10) {
+                overUnder.innerText = "Du er under fraværsgrensa på 10 %";
+            } if (Number(fravaer.value) < 0 || Number(timetall.value) < 0) {
+                overUnder.innerText = "Negative verdier er ugyldige";     
+            } else if (Number(fravaer.value) > Number(timetall.value)) {
+                overUnder.innerText = "Antall fraværstimer kan ikke overstige antall timer i faget";
+            }
+        };
+
+        fravaer.addEventListener("input", regnUt);
+        timetall.addEventListener("input", regnUt);
+    </script>
+</body>
+</html>

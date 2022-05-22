@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oppgave 7 - Vinner (Brukerinput)</title>
+    <style>
+        body {
+            background-color: lightgreen;
+            font-family: sans-serif;
+        }
+        
+        #valgtVinner {
+            height: 20px;
+            width: 200px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <input id="valgtVinner" type="text" placeholder="Skriv inn vinnernavn"></input>
+    <h1>Kjære <span id="vinner">Burt Reynolds</span></h1>
+    <p>I en automatisk loddtrekning har du, <span id="vinner">Burt Reynolds</span>, blitt trukket ut som den heldige vinneren av en splitter ny iPhone med inskripsjonen "I am <span id="vinner">Burt Reynolds</span>".<p>
+    <h2>Vinneren er <span id="vinner">Burt Reynolds</span></h2>
+    <p>Du, <span id="vinner">Burt Reynolds</span>, kan hente telefonen på Kolsås i morgen<p>
+
+    <script>        
+        const valgtVinner = document.querySelector("#valgtVinner");
+        const vinner = document.querySelectorAll("#vinner");
+        
+        function settInnBrukervalg() {
+            for (let i=0; i<5; i++) {
+            vinner[i].innerHTML = valgtVinner.value;
+        } }
+
+        valgtVinner.addEventListener("input", settInnBrukervalg);
+    </script>
+</body>
+</html>

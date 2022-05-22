@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To knapper og to farger</title>
+    <style>
+        body {
+            background-color: #112233;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btnBlue, #btnOrange {
+            font-family: Helvetica, sans-serif;
+            font-size: 15px;
+            border-radius: 15px;
+            padding: 8px;
+            margin: 15px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <section id="knapper">
+        <button id="btnBlue">BLÅ BAKGRUNN</button>
+        <button id="btnOrange">ORANGE BAKGRUNN</button>
+    </section>
+
+    <script>
+        const btnBlue = document.querySelector("#btnBlue");
+        const btnOrange = document.querySelector("#btnOrange");
+
+    function settFarge (klikk) {
+        const knapp = klikk.target;
+        if (knapp.id === "btnBlue") {
+            document.body.style.backgroundColor = "blue";
+        } else {
+            document.body.style.backgroundColor = "orange";
+        }
+    }
+        btnBlue.addEventListener("click", settFarge);
+        btnOrange.addEventListener("click", settFarge);
+    </script>
+</body>
+</html>

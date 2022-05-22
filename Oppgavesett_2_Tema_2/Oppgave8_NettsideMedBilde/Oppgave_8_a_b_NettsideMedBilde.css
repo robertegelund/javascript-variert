@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #112233;
+}
+
+#valgtBilde {
+    width: 800px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#velgBilde, #velgBredde, #velgTittel {
+    font-size: 14px;
+    height: 15px;
+    width: 500px;
+    height: 25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgb(245, 232, 222);
+}

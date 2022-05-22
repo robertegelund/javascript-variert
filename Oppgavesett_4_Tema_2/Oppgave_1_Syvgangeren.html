@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Syvgangeren</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #112233;
+            color: peachpuff;
+            font-family: Helvetica, sans-serif;
+        }
+        p {color: white;}
+    </style>
+</head>
+<body>
+    <h1>.syvgangeren</h1>
+    <section id="syvgangeren"></section>
+
+    <script>
+        const syvgangeren = document.querySelector("#syvgangeren");
+
+        let x = 1;
+        while (x <= 10) {
+            syvgangeren.innerHTML += `<p>7 * ${x} = ${7 * x}</p>`;
+            x++;
+        }
+    </script>
+</body>
+</html>

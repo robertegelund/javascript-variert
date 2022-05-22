@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Oppgave_7.css">
+    <title>Oppgave 7 - Publisere nyhetsartikkel ved å trykke på en knapp</title>
+</head>
+<body>
+    <form id="nyhetsInfo" action="submit">
+        <input id=inpBilde type="text" placeholder="Legg inn url til et nyhetsbilde" autocomplete="off" required>
+        <input id=inpOverskrift type="text" placeholder="Legg til en passende nyhetstekst" autocomplete="off" required>
+        <button id=subBtn type="submit">Publiser nyhet!</button>
+    </form>
+
+    <section id="nyhetsartikkel">
+        <img id="outBilde" src="">
+        <h1 id="outOverskrift"></h1>
+    </section>
+
+    <script>
+        const nyhetsInfo = document.querySelector("#nyhetsInfo")
+        const inpBilde = document.querySelector("#inpBilde");
+        const inpOverskrift = document.querySelector("#inpOverskrift");
+        const outBilde = document.querySelector("#outBilde");
+        const outOverskrift = document.querySelector("#outOverskrift");
+
+        function leggUt (btnKlikk) {
+            btnKlikk.preventDefault();
+            outBilde.src = inpBilde.value;
+            outOverskrift.innerHTML = inpOverskrift.value;
+        }
+
+        nyhetsInfo.addEventListener("submit", leggUt);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fornavn og Etternavn som Parametere</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            background-color: #112233;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: peachpuff;
+            font-family: Helvetica, sans-serif;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const fornavn = "Robert";
+        const etternavn = "Egelund";
+
+        function fulltNavn(first, last) {
+            document.write(first + " " + last);
+        }
+    
+        fulltNavn(fornavn, etternavn);
+    </script>
+</body>
+</html>

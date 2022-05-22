@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Oppgave_5b.css">
+    <title>Nettside: div-element og grønn firkant</title>
+</head>
+<body>
+    <div id="firkant"></div>
+    <section id="inpFields">
+        <h1>Flytt den grønne firkanten X-antall piksler mot høyre</h1>
+        <input id="inpX" type="number" placeholder="Tast inn antall piksler">
+        <h1>Flytt den grønne firkanten Y-antall piksler nedover</h1>
+        <input id="inpY" type="number" placeholder="Tast inn antall piksler">
+    </section>
+
+    <script>
+        const firkant = document.querySelector("#firkant");
+        const inpX = document.querySelector("#inpX");
+        const inpY = document.querySelector("#inpY");
+
+        function flyttFirkant () {
+            firkant.style.left = inpX.value + "px";
+            firkant.style.top = inpY.value + "px";
+        }
+
+        inpX.addEventListener("input", flyttFirkant);
+        inpY.addEventListener("input", flyttFirkant);
+    </script>
+</body>
+</html>

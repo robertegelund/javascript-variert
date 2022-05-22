@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #112233;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    height: 300px;
+    width: 600px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: peachpuff;
+    padding: 30px;
+}
+
+#blomsterListe {
+    padding: 30px;
+}
+
+#blomsterListe #inpBlomst {
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+#blomsterListe #btn {
+    display: none;
+}
+
+#gridcontainer {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oppgave 3b: Div-elementer og JavaScript (farge, bredde, høyde)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #boks-container {
+            background-color: #112233;
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-auto-flow: column;
+            gap: 150px;
+        }
+    </style>
+</head>
+<body>
+    <section id="boks-container">
+        <div id="boksEn"></div>
+        <div id="boksTo"></div>
+    </section>
+    <script>
+        const boksEn = document.querySelector("#boksEn");
+        const boksTo = document.querySelector("#boksTo");
+
+        function settFargeBreddeHoyde(forsteBoks, andreBoks) {
+            forsteBoks.style.backgroundColor = prompt("Box nr. 1: Choose a background color");
+            forsteBoks.style.height =  prompt("Box nr. 1: Choose a height (the number will be in pixels)")+"px";
+            forsteBoks.style.width = prompt("Box nr. 1: Choose a width (the number will be in pixels)")+"px";
+
+            andreBoks.style.backgroundColor = prompt("Box nr. 2: Choose a background color");
+            andreBoks.style.height = prompt("Box nr. 2: Choose a height (the number will be in pixels)")+"px";
+            andreBoks.style.width = prompt("Box nr. 2: Choose a width (the number will be in pixels)")+"px";
+        }
+        settFargeBreddeHoyde(boksEn, boksTo);
+    </script>
+</body>
+</html>

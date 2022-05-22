@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Oppgave_4a.css">
+    <title>Oppgave 4a - Tre favorittretter med prompt</title>
+</head>
+<body>
+    <h1>.dine tre favorittretter/</h1>
+    <ol id=favorittretter></ol>
+    
+    <script>
+        const favorittretter = document.querySelector("#favorittretter");
+
+        function lagListe () {
+            favorittretter.innerHTML += `<li>${prompt("Tast inn din favorittrett nummer én:")}</li>`;
+            favorittretter.innerHTML += `<li>${prompt("Tast inn din favorittrett nummer to:")}</li>`;
+            favorittretter.innerHTML += `<li>${prompt("Tast inn din favorittrett nummer tre:")}</li>`;
+        }
+
+        lagListe();
+    </script>
+</body>
+</html>

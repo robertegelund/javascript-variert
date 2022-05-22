@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_6_KalkulatorVelgRegneart.css">
+    <title>Kalkulator - Bruker velger regneart</title>
+</head>
+<body>
+    <h1>.kalkulator / velg_regneart</h1>
+    <form id="calculator">
+        <input type="number" id="nr_one" placeholder="Tast inn et tall">
+        <select id="regneart"required>
+            <option>(Velg)</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="nr_two" placeholder="Tast inn et tall">
+        <button type="submit" id="calculate">Regn ut!</button>
+    </form>
+    
+    <p id="result"></p>
+
+    <script src="./Oppgave_6_KalkulatorVelgRegneart.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    background-color: #112233;
+    color: peachpuff;
+}
+
+h1, #calculator {
+    margin-bottom: 20px;
+}

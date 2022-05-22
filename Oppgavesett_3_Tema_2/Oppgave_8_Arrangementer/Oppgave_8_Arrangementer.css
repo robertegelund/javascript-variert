@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(190, 190, 190);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+}
+
+#arrangementer {
+    width: 400px;
+    display: grid;
+    grid-auto-rows: 1fr;
+    margin-left: 120px;
+    background-color: white;
+    padding: 15px;
+    gap: 15px;
+    list-style: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#arrangementer li {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+    border-bottom: 1px solid lightgray;
+    line-height: 20px;
+}
+
+#arrangementer img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 12px;
+}
+
+#tittel {
+    font-weight: 600;
+    color: rgb(44, 100, 190);
+    font-size: 16px;
+}
+
+#ukeDatoSted {
+    color: rgb(109, 109, 109);
+    font-size: 14px;
+}
+
+#gjester {
+    font-size: 14px;
+    color: rgb(161, 161, 161);
+}
+
+#interested {
+    color: rgb(44, 100, 190);
+    font-size: 14px;
+}
+
+#arrInfo {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+#arrInfo input, #arrInfo button {
+    margin: 5px;
+    font-size: 16px;
+}

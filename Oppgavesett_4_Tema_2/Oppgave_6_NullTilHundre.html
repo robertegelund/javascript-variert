@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prompt 0 til 100</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #112233;
+            color: peachpuff;
+            font-family: Helvetica, sans-serif;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="brukerbeskjed"></h1>
+
+    <script>
+        const brukerbeskjed = document.querySelector("#brukerbeskjed");
+        
+        const inntast = prompt("Vennligst tast inn et tall mellom 0 og 100:");
+
+        if (inntast < 50) {
+            brukerbeskjed.innerHTML = "Tallet er lite!";
+        } else if (inntast > 50) {
+            brukerbeskjed.innerHTML = "Tallet er stort!";
+        } else {
+            brukerbeskjed.innerHTML = "Tallet er akkurat midt på!";
+        }
+    </script>
+</body>
+</html>

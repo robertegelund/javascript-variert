@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background-color: #112233;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+}
+
+#gridcontainer {
+    width: 430px;
+    height: 270px;
+    background-color: #6b97fc;;
+    display: grid;
+    grid-template-columns: repeat(22, 10px);
+    grid-template-rows: repeat(14, 10px);
+    grid-gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#gridcontainer div {
+    background-color: peachpuff;
+    border-radius: 50%;
+}

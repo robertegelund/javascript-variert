@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oppgave 1 - Vinnerkonstant</title>
+</head>
+<body>
+    <script>
+        // Definerer vinnerkonstanten
+        const VINNER = "Burt Reynolds";
+        
+        // Benytter vinnerkonstanten i JS for HTML
+        document.write(`
+            <h1>Kjære ${VINNER}</h1>
+            <p>I en automatisk loddtrekning har du, ${VINNER}, blitt trukket ut som den heldige vinneren av en splitter ny iPhone med inskripsjonen "I am ${VINNER}".<p>
+            <h2>Vinneren er ${VINNER}</h2>
+            <p>Du, ${VINNER}, kan hente telefonen på Kolsås i morgen<p>
+            `);
+    
+        // Definerer CSS ved bruk av JS
+        const body = document.querySelector("body");
+        body.style.backgroundColor = "lightgreen";
+        body.style.fontFamily = "sans-serif";
+
+    </script>
+</body>
+</html>

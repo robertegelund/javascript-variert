@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #112233;
+}
+
+main {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    position: absolute;
+    height: 10px;
+    width: 1px;
+    background-color: peachpuff;
+}
+
+main p {
+    position: absolute;
+    color: peachpuff;
+    text-align: center;
+}
+
+b {
+    display: inline-block;
+}
+

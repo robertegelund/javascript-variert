@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_4_DuGamlaDuFria.css">
+    <title>Traversering/Grid - Du Gamla Du Fria</title>
+</head>
+<body>
+    <section id="gridcontainer">
+
+    </section>
+
+    <script>
+        const gridcontainer = document.querySelector("#gridcontainer");
+        
+        const nasjonalsangSverige = "DU GAMLA DU FRIA";
+        for (bokstav of nasjonalsangSverige) {
+            gridcontainer.innerHTML += `<div>${bokstav}</div>
+            `}
+    </script>
+</body>
+</html>

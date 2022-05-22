@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oppgave 8 a) b) - Nettside med bilde og tekst (Brukervalgt)</title>
+    <link rel="stylesheet" href="./Oppgave_8_a_b_NettsideMedBilde.css">
+</head>
+<body>
+    <img id="valgtBilde" src="./pilotfrue.jpg" title="Pilotfrue Julianne Nygård foran hennes store sorte bil">
+    <input id="velgBilde" type="text" placeholder="Legg inn url-en til ønsket bilde"></input>
+    <input id="velgBredde" type="number" placeholder="Legg inn bildebredde (i piksler)"></input>
+    <input id="velgTittel" type="text" placeholder="Legg inn en bildetittel. Hold pekeren over bildet for å se tittelen"></input>
+  
+    <script>        
+        const valgtBilde = document.querySelector("#valgtBilde");
+        const velgBilde = document.querySelector("#velgBilde");
+        const velgBredde = document.querySelector("#velgBredde");
+        const velgTittel = document.querySelector("#velgTittel");
+
+        function settBilde () {
+            valgtBilde.src = velgBilde.value;
+        }
+        function settBredde () {
+            valgtBilde.style.width = velgBredde.value + "px";
+        }
+        function settTittel () {          
+            valgtBilde.title = velgTittel.value;
+        }
+
+        velgBilde.addEventListener("input", settBilde);
+        velgBredde.addEventListener("input", settBredde);
+        velgTittel.addEventListener("input", settTittel);
+    </script>
+</body>
+</html>

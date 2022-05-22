@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oppgave 1 - Array med fisk</title>
+</head>
+<body>
+    <script>
+
+        // Oppretter array med syv fiskeslag
+        const fisketyper = ["Ørret", "Laks", "Flyndre", "Sei", "Mort", "Uer", "Breiflabb"]; 
+        console.log(fisketyper); 
+
+        fisketyper.push("Steinbit"); // Legger til fisk på slutten
+        fisketyper.unshift("Gjedde"); // Legger til fisk på starten
+        console.log(fisketyper);
+        
+        fisketyper.pop(); // Fjerner den siste fisken
+        console.log(fisketyper);
+        fisketyper.shift(); // Fjerner den første fisken
+        console.log(fisketyper);
+
+        // Fjerne fisk nummer 4 og 5 med én linje kode. Fisk 4 har indeks 3.
+        fisketyper.splice(3, 2);
+        console.log(fisketyper);
+        
+    </script>
+</body>
+</html>

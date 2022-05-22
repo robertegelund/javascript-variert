@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_9_Visittkort.css">
+    <title>Visittkort</title>
+</head>
+<body>
+    <article id="inpVisittkort">
+        <form action="submit" id="visittkortInfo">
+            <h1>Fyll inn visittkortinformasjon:</h1>
+            <input id="inpFornavn" type="text" placeholder="Fyll inn ditt fornavn" required>
+            <input id="inpEtternavn" type="text" placeholder="Fyll inn ditt etternavn" required>
+            <input id="inpStilling" type="text" placeholder="Angi din stilling" required>
+            <input id="inpBildeUrl" type="text" placeholder="Angi url for ditt portrettbilde" required>
+            <button id="btnLagVisittkort" type="submit">Lag visittkort</button>
+        </form>
+    </article>
+    <article id="visittkort">
+        <h1></h1>
+        <p></p>
+        <img src="" style="width: 300px">
+    </article>
+
+    <script>
+        const outNavn = document.querySelector("#visittkort h1");
+        const outStilling = document.querySelector("#visittkort p");
+        const outBilde = document.querySelector("#visittkort img");
+        const inpVisittkort = document.querySelector("#inpVisittkort");
+        const inpFornavn = document.querySelector("#inpFornavn");
+        const inpEtternavn = document.querySelector("#inpEtternavn");
+        const inpStilling = document.querySelector("#inpStilling");
+        const inpBildeUrl = document.querySelector("#inpBildeUrl");
+
+        function lagVisittkort(clickBtn) {
+            clickBtn.preventDefault();
+            outNavn.innerHTML = inpFornavn.value + " " + 
+            inpEtternavn.value;
+            outStilling.innerHTML = "<strong>Stilling:</strong> " + inpStilling.value;
+            outBilde.src = inpBildeUrl.value;
+        }
+
+        inpVisittkort.addEventListener("submit", lagVisittkort);
+    </script>
+</body>
+</html>
+
+
+  

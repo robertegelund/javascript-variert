@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hestenavn</title>
+    <style>
+        body {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #112233;
+            color: peachpuff;
+            font-family: Helvetica, sans-serif;
+        }
+        p {color: white;}
+        
+        #hestenavn li {margin-bottom: 6px;} 
+    </style>
+</head>
+<body>
+    <h1>.hestenavn</h1>
+    <ol id="hestenavn"></ol>
+
+    <script>
+        const hestenavn = document.querySelector("#hestenavn");
+        
+        const hester = ["Dølahest", "Lyngshest", "Araberhest", "Engelsk fullblodshest", "Fjording"];
+        
+        for (hest of hester) {
+            hestenavn.innerHTML += `<li>${hest}</li>`;
+        }
+    </script>
+</body>
+</html>

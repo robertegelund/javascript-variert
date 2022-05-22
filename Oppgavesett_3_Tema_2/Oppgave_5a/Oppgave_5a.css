@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #112233;
+    height: 100vh;
+    width: 100vw;
+    font-family: Helvetica, sans-serif;
+    color: peachpuff;
+}
+#firkant {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: darkolivegreen;
+}
+h1 {
+    font-size: 20px;
+    padding: 20px;
+}
+#inpFields {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#inpX, #inpY {
+    height: 20px;
+    width: 250px;
+}

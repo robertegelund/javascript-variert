@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ukens grublis</title>
+</head>
+<body>
+    <script>
+        const tallene = [20, 31, 9, 4, 32, 43, 12, 4, 13];
+
+        // a) Legg sammen tallene og skriv ut summen. Bruk en for of-løkke.
+        let sum = 0; 
+        for (tall of tallene) {
+            sum += tall;
+        }
+        console.log(sum);
+
+        // b) Skriv ut alle tallene som er større enn 20.
+        const aboveTwenty = [];
+        for (tall of tallene) {
+            if (tall > 20) {
+                aboveTwenty.push(tall);
+            }
+        }
+        console.log(aboveTwenty);
+
+        // c) Finn det største tallet
+        let max = 0;
+        for (tall of tallene) {
+            if (tall > max) {
+                max = tall;
+            }
+        }
+        console.log(max)
+    </script>
+</body>
+</html>

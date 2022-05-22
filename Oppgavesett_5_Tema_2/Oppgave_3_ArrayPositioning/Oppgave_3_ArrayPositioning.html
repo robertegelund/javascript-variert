@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_3_ArrayPositioning.css">
+    <title>Oppgave 3 - Array med klikkposisjoner</title>
+</head>
+<body>
+    <main>
+        <h1>Klikk på skjermen!</h1>
+        <ul id="klikkListe"></ul>
+    </main>
+
+    <script>
+        const klikkListe = document.querySelector("#klikkListe");
+        const overskrift = document.querySelector("h1");
+
+        // Lagre klikkposisjoner i array
+        const klikkArray = [];
+        function lagreKlikk (klikk) {
+            if (klikk.clientX) {
+                overskrift.style.display = "none";
+                klikkArray.push(klikk.clientX);
+            }
+            oppdatereListe();
+        }
+
+        // Oppdatere klikkListe
+        function oppdatereListe () {
+            klikkListe.innerHTML = "";
+            for (klikk of klikkArray) {
+                klikkListe.innerHTML += `<li>X-posisjon: ${klikk}</li>`;
+            }
+        }
+        
+        document.addEventListener("click", lagreKlikk);
+    </script>
+
+</body>
+</html>

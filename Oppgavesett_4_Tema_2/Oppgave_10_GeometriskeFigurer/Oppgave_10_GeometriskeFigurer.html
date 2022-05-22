@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Oppgave_10_GeometriskeFigurer.css">
+    <title>Oppgave 10 - Geometriske figurer</title>
+</head>
+<body>
+    <main>
+    </main>
+
+    <script>
+        const main = document.querySelector("main");
+
+        for (let i=0; i<60; i++) {
+            
+            const rotasjon = i * 6 + "deg";
+            const avstand = 220 + "px";
+
+            main.innerHTML += `
+                <div 
+                    style = "transform: rotate(${rotasjon}) translateY(${avstand})">
+                </div>
+            `;
+        }
+
+        const divElementer = document.querySelectorAll("main > div");
+        for(let i=0; i<60; i+=15) {
+            divElementer[i].style.width = 3 + "px";
+            divElementer[i].style.height = 20 + "px";
+        }
+
+        for(let i=3; i<=12; i+=3) {
+            
+            const minusRotasjon = (i * -90) -180 + "deg";
+            const rotasjon =  (i * 90) + 180 + "deg";
+            const avstand = 250 + "px";
+
+            main.innerHTML += `
+                <p
+                    style = "transform: rotate(${minusRotasjon}) translateY(${avstand}">
+                <b style="transform: rotate(${rotasjon});">${i}</b></p>
+            `
+        }
+
+    </script>
+
+</body>
+</html>

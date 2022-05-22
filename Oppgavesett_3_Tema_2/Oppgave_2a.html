@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arealet til et rektangel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            background-color: #112233;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: peachpuff;
+            font-family: Helvetica, sans-serif;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+    const bredde = 5;
+    const hoyde = 4;
+
+    function finnAreal (br, ho) {
+        const arealRektangel = br * ho;
+        document.write("Arealet til rektangelet er: " + arealRektangel + " cm&sup2");
+    }
+    
+    finnAreal(bredde, hoyde);
+
+    </script>
+</body>
+</html>

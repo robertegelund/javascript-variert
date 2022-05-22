@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_4_TidsstyrtBredde.css">
+    <title>Oppgave 4 - Tidsstyrt Bredde</title> 
+</head>
+<body>
+    <main>
+    </main>
+
+    <script>
+        const main = document.querySelector("main");
+
+        const bredder = [15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 100];
+        
+        let i = 0;
+        function endreBredde () {
+            if (i >= bredder.length) {
+                i = 0;
+            }    
+            
+            const bredde = bredder[i];
+            main.style.width = bredde + "px";
+
+            i++;
+        }
+
+        setInterval(endreBredde, 500);
+
+    </script>
+</body>
+</html>

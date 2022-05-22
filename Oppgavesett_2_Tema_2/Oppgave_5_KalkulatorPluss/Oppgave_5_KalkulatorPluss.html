@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_5_KalkulatorPluss.css">
+    <title>Kalkulator som summerer</title>
+</head>
+<body>
+    <h1>Kalkulator: Summering (+)</h1>
+    <form id="calculator">
+        <input type="number" id="nr_one" placeholder="Tast inn et tall">
+        <input type="number" id="nr_two" placeholder="Tast inn et tall">
+        <button type="submit" id="calculate">Summer</button>
+    </form>
+    
+    <p id="sum"></p>
+
+    <script>
+        const calculator = document.querySelector("#calculator");
+        const nr_one = document.querySelector("#nr_one");
+        const nr_two = document.querySelector("#nr_two");
+        const sum = document.querySelector("#sum");
+
+        function calculate(btnClick) {
+            btnClick.preventDefault();
+            sum.innerHTML = `Summen av de to tallene er: ${Number(nr_one.value) + Number(nr_two.value)}`;
+        }
+
+        calculator.addEventListener("submit", calculate);
+    </script>
+</body>
+</html>

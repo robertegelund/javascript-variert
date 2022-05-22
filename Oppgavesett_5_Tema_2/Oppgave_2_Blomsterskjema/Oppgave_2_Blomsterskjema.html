@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Oppgave_2_Blomsterskjema.css">
+    <title>Oppgave 2 - Blomsterskjema</title>
+</head>
+<body>
+    <main>
+        <form id="blomsterListe" action="submit" autocomplete="off">
+            <input id="inpBlomst" type="text" placeholder="Tast inn blomsternavn, etterfulgt av enter" required>
+            <button id="btn" type="submit">Legg til blomst!</button>
+        </form>
+        <section id="gridcontainer">
+        </section>
+    </main>
+
+    <script>
+        const gridcontainer = document.querySelector("#gridcontainer");
+        const blomsterListe = document.querySelector("#blomsterListe");
+        const inpBlomst = document.querySelector("#inpBlomst");
+        
+        const blomster = [];
+
+        function leggTilBlomst (btnKlikk) {
+            btnKlikk.preventDefault();
+            gridcontainer.innerHTML = "";
+            blomster.push(inpBlomst.value);
+            blomsterListe.reset();
+            for (blomst of blomster) {
+                gridcontainer.innerHTML += `<div>${blomst}</div>`;
+            }
+        }
+        blomsterListe.addEventListener("submit", leggTilBlomst);
+    </script>
+</body>
+</html>
